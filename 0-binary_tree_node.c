@@ -3,31 +3,30 @@
 /**
  * binary_tree_node - Creates a new binary tree node
  *
- * @parent: Pointer to the parent node of the node to create
- * @value: Value to put in the new node
- * Return: A pointer to the new node, or NULL on failure
+ * @parent: - is a pointer to the parent node of the node to create
+ * @value: - is the value to put in the new node
+ * Return: a pointer to the new node, or NULL on failure
  */
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-    /* Declaration of the new node with its data type */
-    binary_tree_t *newNode;
+    /* declaration of the new node with its data type */
+    binary_tree_t *currentNode;
 
-    /* Allocate memory space for the new node */
-    newNode = (binary_tree_t *)malloc(sizeof(binary_tree_t));
+    /* allocate memory space for that node */
+    currentNode = (binary_tree_t *)malloc(sizeof(binary_tree_t));
 
-    /* Check if memory allocation was successful */
-    if (newNode == NULL)
+    if (currentNode == NULL)
     {
-        return (NULL); /* Return NULL if memory allocation failed */
+        return (NULL);
     }
 
-    /* Assign values to the properties of the node */
-    newNode->parent = parent; /* Set the parent pointer */
-    newNode->n = value; /* Set the value of the node */
-    newNode->left = NULL; /* Set the left child pointer to NULL */
-    newNode->right = NULL; /* Set the right child pointer to NULL */
+    /* assign values to the properties of the node */
+    currentNode->parent = parent;
+    currentNode->n = value;
+    currentNode->left = NULL;
+    currentNode->right = NULL;
 
-    /* Return a pointer to the newly created node */
-    return (newNode);
+    /* return a pointer to the node */
+    return (currentNode);
 }
